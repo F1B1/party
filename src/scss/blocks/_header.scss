@@ -1,0 +1,117 @@
+.header {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	z-index: 5;
+	&__container {}
+	&__main {
+		display: flex;
+		justify-content:space-between;
+		align-items: center;
+		min-height: 80px;
+		flex-wrap: wrap;
+		@media (max-width:$mobile){
+			 padding: 10px 0px 0px 0px; 
+		}
+	}
+	&__info {
+
+		@media (max-width:$mobile){
+			&.active{
+				left: 0;
+			}
+			position: fixed;
+			width: 40%;
+			height: 100%;
+			background-color: rgba(61, 12, 114, 0.95);
+			left: -100%;
+			top: 0;
+			z-index: 20;
+			text-align: center;
+			padding-top: 80px;
+			transition: all 0.8s ease 0s;
+			display: flex;
+			flex-direction: column;
+		}
+		@media (max-width:$mobileSmall){
+			 width: 80%; 
+		}
+	}
+	&__text {
+		color: #fff;
+		padding: 0px 30px 0px 0px;
+		@media (max-width:$mobile){
+			 text-transform: uppercase;
+			 font-size: rem(20);
+			 padding: 0px 0px 10px 0px;
+			 font-weight: 700; 
+		}
+	}
+	&__image {}
+	&__button {
+		min-height: 40px;
+		flex: 0 1 170px;
+		@media (max-width:$tablet){
+			flex: 0 1 130px;
+		}
+		display: flex;
+		justify-content:center;align-items: center;
+		background:linear-gradient(270deg, rgba(37,198,249,1) 0%, rgba(128,11,245,1) 50%) ;
+		color: #fff;
+		border-radius: 20px;
+	}
+}
+
+
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		flex: 0 0 25px;
+		height: 16px;
+		cursor: pointer;
+		z-index: 5;
+		&::before{
+			content:'';
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			background-color:rgba($color: #04C3FF, $alpha: .3) ;
+			border-radius: 50%;
+			left: -55%;
+			top: -100%;
+		}
+		span{
+			content: "";
+			transition: all 0.6s ease 0s;
+			left: 0px;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: #fff;
+			bottom: 0;
+			transform: scale(1);
+			&:first-child{
+				top: 0;
+			}
+			&:last-child{
+				top: calc(50% - 1px);
+			}
+		}
+		&.active {
+			span{
+				transform: rotate(-45deg);
+				top: calc(50% - 1px);
+				&:last-child {
+					transform: scale(0);
+				}
+				&:first-child {
+					transform: rotate(45deg);
+					bottom: calc(50% - 1px);
+				}
+			}
+		}
+	}
+}
+

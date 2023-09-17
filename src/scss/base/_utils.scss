@@ -1,0 +1,250 @@
+
+
+
+
+.title {
+	@include adaptiveValue("font-size",48 ,32,1 );
+	font-weight: 600;
+}
+.link{
+	font-weight: 700;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #999;
+	border: 1px solid #999;
+	padding: 5px;
+	border-radius: 20px;
+	display: flex;
+	justify-content:center;align-items: center;
+	min-height: 30px;
+}
+
+.premium {
+	@include adaptiveValue("width",200 ,120,1);
+	background-color: var(--dark);
+	border-radius: 20px;
+	display: flex;
+	position: absolute;
+	z-index: 5;
+	top: 5%;
+	left: 5%;
+	justify-content:center;align-items: center;
+	min-height: 40px;
+	&__text {
+		text-transform: uppercase;
+		@include adaptiveValue("font-size", 14,12,1 );
+		font-weight: 700;
+		background-image: url('../../img/decor/diamond.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+		padding: 0px 0px 0px 20px;
+	}
+}
+
+//===============================
+.ghost{
+	position: absolute;
+	@include adaptiveValue("width", 120, 50,1);
+	z-index: 5;
+
+}
+.ghost-orange{
+	top: -80%;
+	left: -5%;
+}
+.ghost-blue{
+	top: 5%;
+	right: 0;
+}
+
+.astronaut1{
+	left: 0;
+	top: 30%;
+}
+.astronaut2{
+	right: 0;
+	bottom: 0;
+}
+.astronaut{
+	position: absolute;
+	@media (max-width:$mobile){
+		display: none;
+	}
+}
+.way__column-1{
+	&::before{
+		display: block;
+		width: 70px;
+		content: "";
+		height: 120px;
+		background-image: url(../../img/decor/arrow1.svg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		right: -30%;
+		bottom: 10%;
+		@media (max-width:$mobile){
+			width: 60px;
+			background-image: url(../../img/decor/arrow4.svg);
+			right: -10%;
+			bottom: 0;
+			transform: scale(1,-1); 
+	
+		}
+	}
+}
+
+.way__column-2{
+	&::before{
+		display: block;
+		width: 120px;
+		content: "";
+		height: 120px;
+		background-image: url(../../img/decor/arrow2.svg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		left: -30%;
+		bottom: 0;
+		@media (max-width:$mobile){
+			width: 60px;
+			background-image: url(../../img/decor/arrow4.svg);
+		
+			left: 100%;
+			top: 0;
+		}
+	}
+}
+
+.way__column-3{
+	&::before{
+		display: block;
+		width: 150px;
+		content: "";
+		height: 120px;
+		background-image: url(../../img/decor/arrow3.svg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		right: -50%;
+		bottom: 10%;
+		@media (max-width:$mobile){
+			right: -30%;
+			bottom: 70%; 
+		}
+	}
+}
+
+.way__column-4{
+	max-width: 280px;
+	max-height: 280px;
+	display: flex;
+	justify-content:center;align-items: center;
+	background: linear-gradient(270deg, rgb(22, 120, 156) 0%, rgb(81, 19, 148) 50%) !important;
+	@media (max-width:$mobile){
+		top: 100% !important;
+		transform: translateY(-100%);
+	}
+	p{
+		padding: 0;
+	}
+}
+
+.temporarily {
+	@media (max-width:$mobile){
+		 display: none; 
+	}
+	display: flex;
+	position: relative;
+	&::after{
+		display: block;
+		width: 50px;
+		content: "";
+		height: 120px;
+		background-image: url(../../img/decor/arrow4.svg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		right: 0;
+		top: -100%;
+		transform: rotate(-10deg);
+	}
+	&__icon {
+		background-color: var(--purple);
+		border-radius: 50%;
+		padding: 10px;
+		margin: 0px 20px 0px 0px;
+	}
+	&__text {
+		max-width: 130px;
+	}
+}
+
+
+
+.none {
+	display: none !important;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.no-scroll {
+	overflow-y: hidden;
+}
+
+._ibg {
+	position: relative;
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+}
+
+._video {
+	position: relative;
+	overflow: hidden;
+	height: 0;
+	padding-bottom: 56.25%;
+	video,
+	iframe,
+	object,
+	embed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+.videobg {
+	video,
+	iframe,
+	object,
+	embed {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		min-width: 100%;
+		min-height: 100%;
+		width: auto;
+		height: auto;
+		z-index: -100;
+		transform: translateX(-50%) translateY(-50%);
+		background-size: cover;
+	}
+}

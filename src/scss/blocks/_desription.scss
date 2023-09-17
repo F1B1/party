@@ -1,0 +1,124 @@
+.description {
+	@include adaptiveValue("padding-top",150 ,100,1 );
+	background: linear-gradient(200deg, rgba(22,120,156,1) 0%, rgba(69,15,127,1) 35%, rgba(13,0,18,1) 100%);
+	position: relative;
+	&__container {}
+	&__info {}
+	&__columns {}
+}
+
+.info-description {
+	&__subscribe {
+		display: flex;
+		@include adaptiveValue("padding-bottom",100 ,60,1 );
+	}
+	&__left {
+		flex: 0 1 50%;
+		position: relative;
+		z-index: 3;
+		@media (max-width:$mobile){
+			 flex: 0 1 100%; 
+		}
+	}
+	&__title {
+		@include adaptiveValue("font-size",64 , 38,1);
+		color: #fff;
+		text-wrap: balance;
+		padding: 0px 0px 20px 0px;
+		span{
+			background-color: #2AA5A0;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-image: linear-gradient(270deg, rgb(24, 132, 166) 0%, rgb(148 38 255) 50%);
+		}
+	}
+	&__text {
+		@include adaptiveValue("font-size",20 ,16,1 );
+		font-weight: 400;
+		max-width: 400px;
+		line-height: 120%;
+		span{
+			color: #49cbf4;
+		}
+	}
+	&__right {
+		width: 70%;
+		padding-bottom: 30%;
+		position: absolute;
+		right: 0;
+		@media (max-width:$mobile){
+			 @include adaptiveValue("top",200 ,240,1 ); 
+		}
+	}
+	&__form {
+		width: 100%;
+		display: flex;
+		position: relative;
+		z-index: 3;
+		min-height: 90px;
+		@media (max-width:$mobile){
+			 min-height: 40px; 
+		}
+	}
+	&__input {
+		width: 100%;
+		outline: none;
+		@include adaptiveValue("font-size", 20, 16,1);
+		padding: 0 25px;
+		backdrop-filter: blur(20px);
+		background-color: rgba($color: #fff, $alpha: .2);
+		border-radius: 60px;
+	}
+	&__button {
+		border-radius: 50%;
+		@include adaptiveValue("font-size",42 ,24,1 );
+		flex: 0 1 100px;
+		@media (max-width:$mobile){
+			  flex: 0 1 50px;
+		}
+		display: flex;
+		justify-content:center;align-items: center;
+		backdrop-filter: blur(20px);
+		background-color: rgba($color: #fff, $alpha: .2);
+		
+	}
+}
+
+.description {
+	&__columns {
+		display: flex;
+		margin: 25px -15px 0 ;
+		padding-bottom: 70px;
+		flex-wrap: wrap;
+	}
+	&__column {
+		flex: 0 1 25%;
+		padding: 0 15px;
+		@media (max-width:$tablet){
+			flex: 0 1 50%;
+			padding-bottom: 20px;
+		}
+		@media (max-width:$mobile){
+			@media (max-width:$tablet){
+				flex: 0 1 100%;
+			}
+		}
+	}
+}
+.description-column {
+	&__image {
+		padding: 0px 0px 60% 0px;
+		img{
+			border-radius: 20px;
+		}
+	}
+	&__sub-title {
+		font-size: rem(20);
+		font-weight: 700;
+		padding: 20px 0 10px 0;
+	}
+	&__text {
+		font-size: rem(16);
+		opacity: .4;
+	}
+}

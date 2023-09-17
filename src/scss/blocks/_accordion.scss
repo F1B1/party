@@ -1,0 +1,86 @@
+.accordion {
+	padding: 100px 0px 50px 0px;
+	position: relative;
+	&__purple{
+		position: absolute;
+		right: 0;
+		top: -10%;
+	}
+	&__container {
+		position: relative;
+		z-index: 5;
+	}
+	&__menu {}
+	&__list {}
+	&__item {
+		background: linear-gradient(90deg, rgba(73,203,244,1) 0%, rgba(22,120,156,.5) 70%);
+		border-radius: 35px;
+		color: var(--dark);
+		&.active{
+			.accordion__button{
+				&::after{
+					content:'\2212';
+					
+				}
+			}
+		}
+	}
+	&__link {
+		width: 60px;
+		letter-spacing: 1.5px;
+		margin: 0px 0px 50px 0px;
+		
+	}
+	&__text {
+		@include adaptiveValue("font-size",20 ,18,1 );
+		font-weight: 700;
+		display: flex;
+		justify-content: flex-start;
+		align-items:center;
+		flex: 0 0 100%;
+		@include adaptiveValue("padding-left",50 ,15,1 );
+	}
+	&__button{
+		display: flex;
+		align-items:center;
+		padding: 20px;
+		border-radius: 35px;
+		color: var(--dark);
+		width: 100%;
+		font-weight: 700;
+		@include adaptiveValue("font-size",20 ,18,1 );
+		position: relative;
+		&::after{
+			content:'\002B';
+			position: absolute;
+			font-size: rem(28);
+			font-weight: 700;
+			right: 5%;
+			top: 50%;
+			transform: translate(-5%,-50%);
+		}
+	}
+	&__icon {
+		color: var(--dark);
+		background-color:#49CBF4 ;
+		border-radius: 50%;
+		min-width: 86px;
+		display: flex;
+		justify-content:center;align-items: center;
+		@include adaptiveValue("font-size",40 ,20,1 );
+	}
+	&__content {
+		@include adaptiveValue("font-size",18 ,14,1 );
+		font-weight: 700;
+		margin: 25px;
+		margin-top: 0;
+		letter-spacing: 1.1px;
+		position: relative;
+		overflow: hidden;
+		max-height: 0; 
+		transition: 0.3s; 
+		p{
+			padding: 0px 0px 20px 0px;
+		}
+	}
+}

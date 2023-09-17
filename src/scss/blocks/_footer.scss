@@ -1,0 +1,145 @@
+.footer {
+	&__container {}
+	&__body {
+		display: flex;
+		padding: 100px 0px 0px 0px;
+		@media (max-width:$mobile){
+			 flex-direction: column; 
+		}
+	}
+	&__icon {
+		flex: 0 1 20%;
+		@media (max-width:$mobile){
+			 padding: 0px 0px 50px 0px; 
+		}
+	}
+	&__columns{
+		flex: 0 1 80%;
+		display: grid;
+		grid-template-rows: 80px;
+		padding: 0px 0px 50px 0px;
+		@media (max-width:$tablet){
+			grid-template-rows: auto;
+			padding: 0px 0px 0px 0px;
+		}
+		@media (max-width:$mobile){
+			grid-template-rows: auto;
+		}
+	}
+	&__about {}
+	&__socials {
+		display: flex;
+		align-items: center;
+		@media (max-width:$mobile){
+			 flex-wrap: wrap; 
+			 margin: 0px 0px 30px 0px;
+		}
+	}
+	&__social {
+		color: #fff;
+		border: 1px solid #800BF5;
+		border-radius: 50%;
+		min-height: 56px;
+		display: flex;
+		justify-content:center;align-items: center;
+		min-width: 56px;
+		&:nth-child(1){
+			border-radius: 50px;
+			padding: 0 30px;
+			@media (max-width:$mobile){
+				 flex: 0 1 100%; 
+			}
+		}
+		&:last-child{
+			border-radius: 50px;
+			padding: 0 30px;
+			&::before{
+				content: "";
+				background-image: url(../img/decor/playmarket.png);
+				background-size: contain;
+				width: 32px;
+				height: 32px;
+				background-repeat: no-repeat;
+			}
+		}
+	}
+	&__bottom {
+		display: flex;
+		padding: 10px 0;
+		@media (max-width:$mobile){
+			 flex-direction: column; 
+		}
+	}
+	&__link {
+		opacity: .4;
+		font-size: rem(14);
+		flex: 0 1 25%;
+		display: inline-flex;
+		padding: 5px 0;
+		&:nth-last-child(-n+2){
+			flex: 0 1 40%;
+		}
+		&:last-child{
+			@media (min-width:$mobile){
+				display: flex;
+				justify-content: flex-end;
+			}
+		}
+	
+	}
+}
+.about-footer {
+	display: flex;
+	@media (max-width:$tablet){
+		flex-direction: column;
+	}
+	&__list {
+		display: flex;
+		flex: 0 1 80%;
+		padding: 0px 10px 0px 0px;
+		flex-wrap: wrap;
+	}
+	&__item {
+		@media (max-width:$tablet){
+			flex: 0 1 40%;
+			margin-bottom: 10px;
+		}
+		@media (max-width:$mobile){
+			 flex: 0 1 50%; 
+		}
+		&:not(:last-child) {margin-right:30px};
+	}
+	&__link {
+		@include adaptiveValue("font-size",20 ,18,1 );
+		font-weight: 700;
+		color: #fff;
+	}
+	&__info {}
+}
+.info-about {
+	flex: 0 1 20%;
+	@media (max-width:$tablet){
+		padding: 20px 0px 0px 0px;
+	}
+	&__column {}
+	&__email {
+		color: #49CBF4;
+		font-size: 20px;
+		font-weight: 700;
+		display: inline-flex;
+		margin: 0px 0px 50px 0px;
+	}
+	&__item {
+		@media (max-width:$tablet){
+			padding: 0px 0px 30px 0px;
+		}
+	}
+	&__number {
+		color: #fff;
+		display: inline-flex;
+		margin: 0px 0px 10px 0px;
+	}
+	&__text {
+		opacity: .4;
+	}
+}

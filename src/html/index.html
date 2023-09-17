@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Стартовый шаблон</title>
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			@@include('header.html')
+			<main class="page">
+				<section class="description">
+					<div class="description__container container">
+						<div class="description__info info-description">
+							<div class="info-description__subscribe">
+								<div class="info-description__left">
+									<h1 class="info-description__title"><span>Лучшие</span> игры со всего мира</h1>
+									<p class="info-description__text">Каждую пятницу новая порция. Подписка за <span>399 ₽</span> в месяц</p>
+								</div>
+								<div class="info-description__right _ibg">
+									<img src="img/background.png" alt="background">
+								</div>
+								<div class="ghost ghost-blue"><img src="img/decor/ghost-blue.svg" alt="ghost"></div>
+							</div>
+							<form action="" class="info-description__form">
+								<div class="ghost ghost-orange"><img src="img/decor/ghost-orange.svg" alt="ghost"></div>
+								<input placeholder="Введите email чтобы войти в аккаунт или создать новый" autocomplete="off" type="text" name="text"class="info-description__input">
+								<button type="submit" class="info-description__button">></button>
+							</form>
+						</div>
+						<div class="description__columns">
+							<div class="description__column">
+								<div class="description-column__image _ibg">
+									<img src="img/showcase/01.png" alt="game">
+								</div>
+								 <h3 class="description-column__sub-title">Свинтус NEON</h3>
+								 <p class="description-column__text">Весёлая и быстрая карточная игра для любой компании</p>
+							</div>
+							<div class="description__column">
+								<div class="description-column__image _ibg">
+									<img src="img/showcase/03.png" alt="game">
+								</div>
+								 <h3 class="description-column__sub-title">Правда или действие</h3>
+								 <p class="description-column__text">Всё будет основано только на вашей жизни и фактах из неё</p>
+							</div>
+							<div class="description__column">
+								<div class="description-column__image _ibg">
+									<img src="img/showcase/02.png" alt="game">
+								</div>
+								 <h3 class="description-column__sub-title">Квиз Логика</h3>
+								 <p class="description-column__text">Настольное развлечение для детей и взрослых</p>
+							</div>
+							<div class="description__column">
+								<div class="description-column__image _ibg">
+									<img src="img/showcase/04.png" alt="game">
+								</div>
+								 <h3 class="description-column__sub-title">Имаджинариум</h3>
+								 <p class="description-column__text">Вам понадобится вся ваша фантазия и эмпатия</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="video">
+					<div class="video__container container">
+						<div class="video__wrapper">
+							<span class="video__icon"></span>
+							<img src="http://media.w3.org/2010/05/sintel/poster.png" alt="" class="video__poster">
+						</div>
+					</div>
+				</section>
+				<section class="entertainment">
+					<img class="entertainment__purple" src="img/entertainment/purple.png" alt="bubble">
+					<div class="entertainment__container container">
+						<div class="entertainment__caption">
+							<a href="#" class="entertainment__link link">Играйте вместе</a>
+							<h2 class="entertainment__title title">Partystation — новый способ развлечений для любой компании</h2>
+						</div>
+						<div class="entertainment__swiper">
+							<div class="astronaut1 astronaut">
+								<img  src="img/entertainment/astronaut1.png" alt="astronaut">
+							</div>	
+							<div class="entertainment__way way swiper-wrapper">	
+								<div class="swiper-slide way__column-item">
+									<div class="way__column way__column-number way__column-1">
+										<p class="way__text">Собери друзей перед экраном ТВ и можно начинать вечеринку!</p>
+									</div>           
+								</div>
+								<div class="swiper-slide way__column-item">
+									<div class="way__column way__column-number way__column-2">
+										<p class="way__text">Подключайте смартфоны к телевизору одним нажатием</p>
+									</div>           
+								</div>
+								<div class="swiper-slide way__column-item">
+									<div class="way__column way__column-number way__column-3">
+										<p class="way__text">Смартфоны в руках возьмут — игровые контроллеры</p>
+									</div>           
+								</div>
+								<div class="swiper-slide way__column-item">
+									<div class="way__column way__column-4 ">
+										<p class="way__text">Начать играть</p>
+									</div>           
+								</div>
+								<div class="way__temporarily temporarily">
+									<div class="temporarily__icon"><img src="img/decor/android.svg " alt="android"></div>
+									<p class="temporarily__text">Так же доступно на AndroidTV </p>
+								</div>
+							</div>
+							<div class="astronaut2 astronaut">
+								<img  src="img/entertainment/astronaut2.png" alt="astronaut">
+							</div>
+						</div>
+						<div class="entertainment__controls controls-entertainment">
+							<div class="controls-entertainment__dotts"></div>
+						</div>
+						<div class="entertainment__choose choose">
+							<h2 class="choose__title">Где хотите начать играть?</h2>
+							<div class="choose__body">
+								<a href="#" class="choose__button choose__button-1">ПК</a>
+								<span class="choose__text">или</span>
+								<a href="#" class="choose__button choose__button-2">Android TV</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="catalog">
+					<div class="catalog__container container">
+						<div class="catalog__caption">
+							<a href="" class="catalog__link link">во что сыграем?</a>
+							<h2 class="catalog__title title">Простые правила, быстрые и интересные партии и постоянно пополняющийся каталог</h2>
+						</div>
+						<article class="catalog__main">
+							<div class="catalog__preview preview-catalog">
+								<div class="preview-catalog__columns swiper-wrapper">
+									<div class="preview-catalog__column swiper-slide">
+										<div class="preview-catalog__image _ibg">
+											<img src="img/catalog/image.png" alt="background">
+										</div>
+										<div data-swiper-parallax="-200%" class="preview-catalog__content">
+											<h3 class="preview-catalog__title">Свинтус NEON</h3>
+											<p class="preview-catalog__text">Весёлая и быстрая карточная игра для любой компании, для малого и большого количества игроков</p>
+										</div>
+									</div>
+									<div class="preview-catalog__column swiper-slide">
+										<div class="preview-catalog__image _ibg">
+											<img src="img/catalog/image.png" alt="background">
+										</div>
+										<div data-swiper-parallax="-200%" class="preview-catalog__content">
+											<h3 class="preview-catalog__title">Свинтус NEON</h3>
+											<p class="preview-catalog__text">Весёлая и быстрая карточная игра для любой компании, для малого и большого количества игроков</p>
+										</div>
+									</div>
+									<div class="preview-catalog__column swiper-slide">
+										<div class="preview-catalog__image _ibg">
+											<img src="img/catalog/image.png" alt="background">
+										</div>
+										<div data-swiper-parallax="-200%" class="preview-catalog__content">
+											<h3 class="preview-catalog__title">Свинтус NEON</h3>
+											<p class="preview-catalog__text">Весёлая и быстрая карточная игра для любой компании, для малого и большого количества игроков</p>
+										</div>
+									</div>
+									<div class="preview-catalog__column swiper-slide">
+										<div class="preview-catalog__image _ibg">
+											<img src="img/catalog/image.png" alt="background">
+										</div>
+										<div data-swiper-parallax="-200%" class="preview-catalog__content">
+											<h3 class="preview-catalog__title">Свинтус NEON</h3>
+											<p class="preview-catalog__text">Весёлая и быстрая карточная игра для любой компании, для малого и большого количества игроков</p>
+										</div>
+									</div>
+								</div>
+								<div class="preview-catalog__navigation">
+									<div class="preview-catalog__button swiper-button-next">&rarr;</div>
+								</div>
+							</div>
+							<div class="catalog__sub-preview sub-preview">
+								<div class="sub-preview__columns">
+									<div class="sub-preview__pagination swiper-wrapper">
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+				</section>
+				<section class="news">
+					<div class="news__container container">
+						<div class="news__top">
+							<h2 class="news__title sub-title">Новинки</h2>
+							<div class="news__pagination">
+								<div class="news__button news__button-prev swiper-button-prev">&larr;</div>
+								<div class="news__button news__button-next swiper-button-next">&rarr;</div>
+							</div>
+						</div>
+						<div class="news__swiper">
+							<div class="news__columns swiper-wrapper">
+								<div class="news__column swiper-slide">
+									<div class="news__image _ibg">
+										<img src="img/new/01.png" alt="game">
+									</div>
+									<div class="premium">
+										<p class="premium__text">Премиум</p>
+									</div>
+								</div>
+								<div class="news__column swiper-slide">
+									<div class="news__image _ibg">
+										<img src="img/new/02.png" alt="game">
+									</div>
+								</div>
+								<div class="news__column swiper-slide">
+									<div class="news__image _ibg">
+										<img src="img/new/03.png" alt="game">
+									</div>
+								</div>
+								<div class="news__column swiper-slide">
+									<div class="news__image _ibg">
+										<img src="img/new/04.png" alt="game">
+									</div>
+								</div>
+								<div class="news__column swiper-slide">
+									<div class="news__image _ibg">
+										<img src="img/new/01.png" alt="game">
+									</div>
+								</div>
+								<div class="news__column swiper-slide">
+									<div class="news__image _ibg">
+										<img src="img/new/02.png" alt="game">
+									</div>
+								</div>
+								<div class="news__column swiper-slide">
+									<div class="news__image _ibg">
+										<img src="img/new/03.png" alt="game">
+									</div>
+								</div>
+								<div class="news__column swiper-slide">
+									<div class="news__image _ibg">
+										<img src="img/new/04.png" alt="game">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="family">
+					<div class="news__container container">
+						<div class="news__top">
+							<h2 class="news__title sub-title">Для всей семьи</h2>
+							<div class="news__pagination">
+								<div class="news__button family__button-prev swiper-button-prev">&larr;</div>
+								<div class="news__button family__button-next swiper-button-next">&rarr;</div>
+							</div>
+						</div>
+						<div class="family__swiper">
+							<div class="news__columns swiper-wrapper">
+								<div class="news__column swiper-slide">
+									<div class="news__image _ibg">
+										<img src="img/family/01.png" alt="game">
+									</div>
+								</div>
+								<div class="news__column swiper-slide">
+									<div class="news__image _ibg">
+										<img src="img/family/02.png" alt="game">
+									</div>
+								</div>
+								<div class="news__column swiper-slide">
+									<div class="news__image _ibg">
+										<img src="img/family/03.png" alt="game">
+									</div>
+									<div class="premium">
+										<p class="premium__text">Премиум</p>
+									</div>
+								</div>
+								<div class="news__column swiper-slide">
+									<div class="news__image _ibg">
+										<img src="img/family/04.png" alt="game">
+									</div>
+								</div>
+								<div class="news__column swiper-slide">
+									<div class="news__image _ibg">
+										<img src="img/family/01.png" alt="game">
+									</div>
+								</div>
+								<div class="news__column swiper-slide">
+									<div class="news__image _ibg">
+										<img src="img/family/02.png" alt="game">
+									</div>
+								</div>
+								<div class="news__column swiper-slide">
+									<div class="news__image _ibg">
+										<img src="img/family/03.png" alt="game">
+									</div>
+								</div>
+								<div class="news__column swiper-slide">
+									<div class="news__image _ibg">
+										<img src="img/family/04.png" alt="game">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="smart">
+					<div class="news__container container">
+						<div class="news__top">
+							<h2 class="news__title sub-title">Новинки</h2>
+							<div class="news__pagination">
+								<div class="news__button smart__button-prev swiper-button-prev">&larr;</div>
+								<div class="news__button smart__button-next swiper-button-next">&rarr;</div>
+							</div>
+						</div>
+						<div class="news__swiper">
+							<div class="news__columns swiper-wrapper">
+								<div class="news__column swiper-slide">
+									<div class="news__image _ibg">
+										<img src="img/smart/01.png" alt="game">
+									</div>
+									<div class="premium">
+										<p class="premium__text">Премиум</p>
+									</div>
+								</div>
+								<div class="news__column swiper-slide">
+									<div class="news__image _ibg">
+										<img src="img/smart/02.png" alt="game">
+									</div>
+								</div>
+								<div class="news__column swiper-slide">
+									<div class="news__image _ibg">
+										<img src="img/smart/03.png" alt="game">
+									</div>
+								</div>
+								<div class="news__column swiper-slide">
+									<div class="news__image _ibg">
+										<img src="img/smart/04.png" alt="game">
+									</div>
+								</div>
+								<div class="news__column swiper-slide">
+									<div class="news__image _ibg">
+										<img src="img/smart/01.png" alt="">
+									</div>
+								</div>
+								<div class="news__column swiper-slide">
+									<div class="news__image _ibg">
+										<img src="img/smart/02.png" alt="game">
+									</div>
+								</div>
+								<div class="news__column swiper-slide">
+									<div class="news__image _ibg">
+										<img src="img/smart/03.png" alt="game">
+									</div>
+								</div>
+								<div class="news__column swiper-slide">
+									<div class="news__image _ibg">
+										<img src="img/smart/04.png" alt="game">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<article class="subscription">
+					<div class="subscription__container container">
+						<div class="subscription__link link">Играйте бесплатно, купите потом</div>
+						<div class="subscription__columns">
+							<div class="subscription__free free">
+								<div class="free__image">
+									<img src="img/decor/tree.svg" alt="tree">
+								</div>
+								<h2 class="free__title">Бесплатно</h2>
+								<p class="free__text">Базовая версия<span>с ограниченным доступом</span></p>
+							</div>
+							<div class="subscription__pay-premium pay-premium">
+								<div class="pay-premium__image">
+									<img src="img/decor/star.svg" alt="star">
+								</div>
+								<h2 class="pay-premium__title">399 руб/месяц</h2>
+								<p class="pay-premium__text">Премиум версия<span> с полным доступом</span></p>
+							</div>
+						</div>
+					</div>
+				</article>
+				<section class="platform">
+					<div class="platform__container container">
+						<div class="platform__swiper">
+							<div class="platform__columns">
+								<div class="platform__dice">
+									<img src="img/decor/dice.png" alt="">
+								</div>
+								<a href="" class="platform__link link">Возможности платформы</a>
+								<div class="platform__column">
+									<div class="platform__description platform__description-1">
+										 <h2 class="platform__title">Можно играть на <span>Smart-tv</span> или <span>PC</span></h2>
+										 <p class="platform__text">Собери друзей перед экраном ТВ и можно начинать вечеринку!</p>
+										 <a href="#" class="platform__button">Начать играть</a>
+									</div>
+									<div class="platform__images">
+										<div class="platform__image platform__image-laptop"><img src="img/platform/laptop.png" alt="laptop"></div>
+										<div class="platform__image platform__image-pc"><img src="img/platform/comp.png" alt="pc"></div>
+									</div>
+								</div>
+								<div class="platform__column">
+									<div class="platform__description platform__description-2">
+										 <h2 class="platform__title">Мобильный телефон в качестве <span>контроллера</span></h2>
+										 <p class="platform__text">с их помощью можно выбирать правильные ответы, управлять событиями на большом экране</p>
+										 <a href="#" class="platform__button">Начать играть</a>
+									</div>
+									<div class="platform__images platform__images-blue">
+										<div class="platform__image platform__image-iphone"><img src="img/platform/iphone.png" alt="iphone"></div>
+									</div>
+								</div>
+								<div class="platform__column">
+									<div class="platform__description platform__description-1">
+										 <h2 class="platform__title"><span>Новые</span> игры каждую пятницу</h2>
+										 <p class="platform__text">Простые правила, быстрые и интересные партии</p>
+										 <a href="#" class="platform__button">Начать играть</a>
+									</div>
+									<div class="platform__images platform__images-dark">
+										<div class="platform__image platform__image-pc"><img src="img/platform/comp.png" alt="pc"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="review">
+					<div class="review__container container">
+						<div class="review__body">
+							<div class="review__columns swiper-wrapper">
+								<div class="review__column swiper-slide">
+									<div data-swiper-parallax="-20%" class="review__item">
+										<p class="review__text">Команда, опыт, любовь к прогрессу, экспертиза, а еще business-first подход: мы не «продаем решения», а создаем стратегию развития вместе с заказчиком, где важен результат, а не набор технологий.</p>
+										<div class="review__author">
+											<p class="review__name">Антон Кириленко</p>
+											<div class="review__image">
+												<img src="img/catalog/avatar3.png" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="review__pagination">
+										<div class="news__button review__button-prev swiper-button-prev swiper-button-disabled">←</div>
+										<div class="news__button review__button-next swiper-button-next">→</div>
+									</div>
+								</div>
+								<div class="review__column swiper-slide">
+									<div data-swiper-parallax="-50%" class="review__item">
+										<p class="review__text">Команда, опыт, любовь к прогрессу, экспертиза, а еще business-first подход: мы не «продаем решения», а создаем стратегию развития вместе с заказчиком, где важен результат, а не набор технологий.</p>
+										<div class="review__author">
+											<p class="review__name">Антон Кириленко</p>
+											<div class="review__image">
+												<img src="img/catalog/avatar2.png" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="review__pagination">
+										<div class="news__button review__button-prev swiper-button-prev swiper-button-disabled">←</div>
+										<div class="news__button review__button-next swiper-button-next">→</div>
+									</div>
+								</div>
+								<div class="review__column swiper-slide">
+									<div data-swiper-parallax="-100%" class="review__item">
+										<p class="review__text">Команда, опыт, любовь к прогрессу, экспертиза, а еще business-first подход: мы не «продаем решения», а создаем стратегию развития вместе с заказчиком, где важен результат, а не набор технологий.</p>
+										<div class="review__author">
+											<p class="review__name">Антон Кириленко</p>
+											<div class="review__image">
+												<img src="img/catalog/avatar4.png" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="review__pagination">
+										<div class="news__button review__button-prev swiper-button-prev swiper-button-disabled">←</div>
+										<div class="news__button review__button-next swiper-button-next">→</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="accordion">
+					<img class="accordion__purple" src="img/entertainment/purple.png" alt="bubble">
+					<div class="accordion__container container">
+						<a href="" class="accordion__link link">FAQ</a>
+						<nav class="accordion__menu">
+							<ul class="accordion__list">
+								<li class="accordion__item">
+									<a type="submit" class="accordion__button">Что такое PartyStation?</a>	
+									<div class="accordion__content">
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit autem pariatur magnam vel aspernatur ad nostrum facere molestiae quibusdam maiores temporibus nihil quasi illum, modi, atque et reiciendis consectetur libero.
+										Ea modi nostrum magni officiis tempora aliquid expedita iste libero quae ex? Quis ut excepturi, maiores et, laborum sed illum pariatur maxime qui, ipsa quibusdam debitis culpa neque temporibus tempore.</p>
+									</div>
+								</li>
+								<li class="accordion__item">
+									<a type="submit" class="accordion__button">Какие игры есть в PartyStation?</a>	
+									<div class="accordion__content">
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit autem pariatur magnam vel aspernatur ad nostrum facere molestiae quibusdam maiores temporibus nihil quasi illum, modi, atque et reiciendis consectetur libero.
+										Ea modi nostrum magni officiis tempora aliquid expedita iste libero quae ex? Quis ut excepturi, maiores et, laborum sed illum pariatur maxime qui, ipsa quibusdam debitis culpa neque temporibus tempore.</p>
+									</div>
+								</li>
+								<li class="accordion__item">
+									<a type="submit" class="accordion__button">Как играть в PartyStation?</a>	
+									<div class="accordion__content">
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit autem pariatur magnam vel aspernatur ad nostrum facere molestiae quibusdam maiores temporibus nihil quasi illum, modi, atque et reiciendis consectetur libero.
+										Ea modi nostrum magni officiis tempora aliquid expedita iste libero quae ex? Quis ut excepturi, maiores et, laborum sed illum pariatur maxime qui, ipsa quibusdam debitis culpa neque temporibus tempore.</p>
+									</div>
+								</li>
+								<li class="accordion__item">
+									<a type="submit" class="accordion__button">Какие устройства поддерживаются в PatyStation?</a>	
+									<div class="accordion__content">
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit autem pariatur magnam vel aspernatur ad nostrum facere molestiae quibusdam maiores temporibus nihil quasi illum, modi, atque et reiciendis consectetur libero.
+										Ea modi nostrum magni officiis tempora aliquid expedita iste libero quae ex? Quis ut excepturi, maiores et, laborum sed illum pariatur maxime qui, ipsa quibusdam debitis culpa neque temporibus tempore.</p>
+									</div>
+								</li>
+								<li class="accordion__item">
+									<a type="submit" class="accordion__button">Сколько это стоит?</a>	
+									<div class="accordion__content">
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit autem pariatur magnam vel aspernatur ad nostrum facere molestiae quibusdam maiores temporibus nihil quasi illum, modi, atque et reiciendis consectetur libero.
+										Ea modi nostrum magni officiis tempora aliquid expedita iste libero quae ex? Quis ut excepturi, maiores et, laborum sed illum pariatur maxime qui, ipsa quibusdam debitis culpa neque temporibus tempore.</p>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</section>
+				<section class="partners">
+					<div class="partners__container container">
+						<a href="" class="partners__link link">Наши партнеры</a>
+						<div class="partners__columns">
+							<div class="partners__column">
+								<img src="img/partner/01.png" alt="Мегафон">
+							</div>
+							<div class="partners__column">
+								<img src="img/partner/02.png" alt="мтс">
+							</div>
+							<div class="partners__column">
+								<img src="img/partner/03.png" alt="ruda games">
+							</div>
+							<div class="partners__column">
+								<img src="img/partner/04.png" alt="xiaomi">
+							</div>
+							<div class="partners__column">
+								<img src="img/partner/05.png" alt="quiz heroes">
+							</div>
+							<div class="partners__column">
+								<img src="img/partner/06.png" alt="сбер">
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			@@include('footer.html')
+		</div>
+		<script src="./js/index.bundle.js"></script>
+	</body>
+</html>

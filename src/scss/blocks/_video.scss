@@ -1,0 +1,64 @@
+.video {
+	background: linear-gradient(270deg, rgba(46,9,86,1) 0%, rgba(13,0,18,1) 100%);
+	padding: 30px 0px 90px 0px;
+	&__container {}
+	&__wrapper {
+		width: 100%;
+		padding-top: calc(733 / 1320) * 100%;
+		position: relative;
+		box-shadow: 0px 0px 90px var(--dark), 0 0 10px var(--purple);
+	}
+	&__icon {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+			width: 56px;
+			height: 56px;
+			border-radius: 50%;
+			box-shadow: 0 0 0 4px #fff;
+			z-index: 3;
+			cursor: pointer;
+			transition: .2s ease;
+			transition-property: opacity, visibility;
+	
+			&::before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				left: 21px;
+				width: 0;
+				height: 0;
+				border: 20px solid transparent;
+				border-top-width: 12px;
+				border-bottom-width: 12px;
+				border-left-color: #fff;
+				border-right-width: 0;
+				transition: transform .2s ease;
+			}
+	}
+	&__player {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+	&__poster{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 2;
+	}
+}
