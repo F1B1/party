@@ -9,12 +9,19 @@
 	</head>
 	<body>
 		<div class="wrapper">
+			<div class="loader">
+	<h2 class="loader__title">Party</h2>
+	<div class="loader__item loader__item-1"></div>
+	<div class="loader__item loader__item-2"></div>
+	<div class="loader__item loader__item-3"></div>
+</div>
 			<header class="header">
 	<div class="header__container container">
 		<div class="header__main">
 			<div class="header__info">
 				<a href="#" class="header__text">о компании</a>
-				<a href="#" class="header__text">вакансии</a>
+				<a href="#" class="header__text">каталог</a>
+				<a href="#" class="header__text">поддержка</a>
 			</div>
 			<div class="header__image">
 				<img src="img/logo.png" alt="">
@@ -34,7 +41,7 @@
 									<p class="info-description__text">Каждую пятницу новая порция. Подписка за <span>399 ₽</span> в месяц</p>
 								</div>
 								<div class="info-description__right _ibg">
-									<img src="img/background.png" alt="background">
+									<img class="lazy" data-src="lazy.jpg" src="img/background.png" alt="background">
 								</div>
 								<div class="ghost ghost-blue"><img src="img/decor/ghost-blue.svg" alt="ghost"></div>
 							</div>
@@ -46,46 +53,52 @@
 						</div>
 						<div class="description__columns">
 							<div class="description__column">
-								<div class="description-column__image _ibg">
-									<img src="img/showcase/01.png" alt="game">
-								</div>
+								<a href="#" class="description-column__image _ibg">
+									<img class="lazy" data-src="lazy.jpg" src="img/showcase/01.webp" alt="game">
+								</a>
 								 <h3 class="description-column__sub-title">Свинтус NEON</h3>
 								 <p class="description-column__text">Весёлая и быстрая карточная игра для любой компании</p>
 							</div>
 							<div class="description__column">
-								<div class="description-column__image _ibg">
-									<img src="img/showcase/03.png" alt="game">
-								</div>
+								<a href="#" class="description-column__image _ibg">
+									<img class="lazy" data-src="lazy.jpg" src="img/showcase/03.webp" alt="game">
+								</a>
 								 <h3 class="description-column__sub-title">Правда или действие</h3>
 								 <p class="description-column__text">Всё будет основано только на вашей жизни и фактах из неё</p>
 							</div>
 							<div class="description__column">
-								<div class="description-column__image _ibg">
-									<img src="img/showcase/02.png" alt="game">
-								</div>
+								<a href="#" class="description-column__image _ibg">
+									<img class="lazy" data-src="lazy.jpg" src="img/showcase/02.webp" alt="game">
+								</a>
 								 <h3 class="description-column__sub-title">Квиз Логика</h3>
 								 <p class="description-column__text">Настольное развлечение для детей и взрослых</p>
 							</div>
 							<div class="description__column">
-								<div class="description-column__image _ibg">
-									<img src="img/showcase/04.png" alt="game">
-								</div>
+								<a href="#" class="description-column__image _ibg">
+									<img class="lazy" data-src="lazy.jpg" src="img/showcase/04.webp" alt="game">
+								</a>
 								 <h3 class="description-column__sub-title">Имаджинариум</h3>
 								 <p class="description-column__text">Вам понадобится вся ваша фантазия и эмпатия</p>
 							</div>
 						</div>
 					</div>
 				</section>
-				<section class="video">
+				<section class="video-main">
 					<div class="video__container container">
 						<div class="video__wrapper">
 							<span class="video__icon"></span>
-							<img src="http://media.w3.org/2010/05/sintel/poster.png" alt="" class="video__poster">
+							<img  src="http://media.w3.org/2010/05/sintel/poster.png" alt="poster" class="video__poster">
+						</div>
+						<div class="video-modal">
+							<div class="video-content">
+								<span data-close id="close-btn">&times;</span>
+								<div class="video" data-src="https://www.youtube.com/embed/HOfdboHvshg?autoplay=1"></div>
+							</div>
 						</div>
 					</div>
 				</section>
 				<section class="entertainment">
-					<img class="entertainment__purple" src="img/entertainment/purple.png" alt="bubble">
+					<img class="entertainment__purple" src="img/entertainment/purple.webp" alt="bubble">
 					<div class="entertainment__container container">
 						<div class="entertainment__caption">
 							<a href="#" class="entertainment__link link">Играйте вместе</a>
@@ -93,28 +106,28 @@
 						</div>
 						<div class="entertainment__swiper">
 							<div class="astronaut1 astronaut">
-								<img  src="img/entertainment/astronaut1.png" alt="astronaut">
+								<img class="lazy" data-src="lazy.jpg" src="img/entertainment/astronaut1.webp" alt="astronaut">
 							</div>	
 							<div class="entertainment__way way swiper-wrapper">	
-								<div class="swiper-slide way__column-item">
+								<div class="swiper-slide way__left way__column-item">
 									<div class="way__column way__column-number way__column-1">
 										<p class="way__text">Собери друзей перед экраном ТВ и можно начинать вечеринку!</p>
 									</div>           
 								</div>
-								<div class="swiper-slide way__column-item">
+								<div class="swiper-slide way__right way__column-item">
 									<div class="way__column way__column-number way__column-2">
 										<p class="way__text">Подключайте смартфоны к телевизору одним нажатием</p>
 									</div>           
 								</div>
-								<div class="swiper-slide way__column-item">
+								<div class="swiper-slide way__left way__column-item">
 									<div class="way__column way__column-number way__column-3">
 										<p class="way__text">Смартфоны в руках возьмут — игровые контроллеры</p>
 									</div>           
 								</div>
-								<div class="swiper-slide way__column-item">
-									<div class="way__column way__column-4 ">
+								<div class="swiper-slide way__right way__column-item">
+									<a href="#" class="way__column way__column-4 ">
 										<p class="way__text">Начать играть</p>
-									</div>           
+									</a>           
 								</div>
 								<div class="way__temporarily temporarily">
 									<div class="temporarily__icon"><img src="img/decor/android.svg " alt="android"></div>
@@ -122,7 +135,7 @@
 								</div>
 							</div>
 							<div class="astronaut2 astronaut">
-								<img  src="img/entertainment/astronaut2.png" alt="astronaut">
+								<img class="lazy" data-src="lazy.jpg" src="img/entertainment/astronaut2.webp" alt="astronaut">
 							</div>
 						</div>
 						<div class="entertainment__controls controls-entertainment">
@@ -149,7 +162,7 @@
 								<div class="preview-catalog__columns swiper-wrapper">
 									<div class="preview-catalog__column swiper-slide">
 										<div class="preview-catalog__image _ibg">
-											<img src="img/catalog/image.png" alt="background">
+											<img class="lazy" data-src="lazy.jpg" src="img/catalog/image.webp" alt="background">
 										</div>
 										<div data-swiper-parallax="-200%" class="preview-catalog__content">
 											<h3 class="preview-catalog__title">Свинтус NEON</h3>
@@ -158,7 +171,7 @@
 									</div>
 									<div class="preview-catalog__column swiper-slide">
 										<div class="preview-catalog__image _ibg">
-											<img src="img/catalog/image.png" alt="background">
+											<img class="lazy" data-src="lazy.jpg" src="img/catalog/image.webp" alt="background">
 										</div>
 										<div data-swiper-parallax="-200%" class="preview-catalog__content">
 											<h3 class="preview-catalog__title">Свинтус NEON</h3>
@@ -167,7 +180,7 @@
 									</div>
 									<div class="preview-catalog__column swiper-slide">
 										<div class="preview-catalog__image _ibg">
-											<img src="img/catalog/image.png" alt="background">
+											<img class="lazy" data-src="lazy.jpg" src="img/catalog/image.webp" alt="background">
 										</div>
 										<div data-swiper-parallax="-200%" class="preview-catalog__content">
 											<h3 class="preview-catalog__title">Свинтус NEON</h3>
@@ -176,7 +189,7 @@
 									</div>
 									<div class="preview-catalog__column swiper-slide">
 										<div class="preview-catalog__image _ibg">
-											<img src="img/catalog/image.png" alt="background">
+											<img class="lazy" data-src="lazy.jpg" src="img/catalog/image.webp" alt="background">
 										</div>
 										<div data-swiper-parallax="-200%" class="preview-catalog__content">
 											<h3 class="preview-catalog__title">Свинтус NEON</h3>
@@ -210,7 +223,7 @@
 							<div class="news__columns swiper-wrapper">
 								<div class="news__column swiper-slide">
 									<div class="news__image _ibg">
-										<img src="img/new/01.png" alt="game">
+										<img class="lazy" data-src="lazy.jpg" src="img/new/01.webp" alt="game">
 									</div>
 									<div class="premium">
 										<p class="premium__text">Премиум</p>
@@ -218,37 +231,37 @@
 								</div>
 								<div class="news__column swiper-slide">
 									<div class="news__image _ibg">
-										<img src="img/new/02.png" alt="game">
+										<img class="lazy" data-src="lazy.jpg" src="img/new/02.webp" alt="game">
 									</div>
 								</div>
 								<div class="news__column swiper-slide">
 									<div class="news__image _ibg">
-										<img src="img/new/03.png" alt="game">
+										<img class="lazy" data-src="lazy.jpg" src="img/new/03.webp" alt="game">
 									</div>
 								</div>
 								<div class="news__column swiper-slide">
 									<div class="news__image _ibg">
-										<img src="img/new/04.png" alt="game">
+										<img class="lazy" data-src="lazy.jpg" src="img/new/04.webp" alt="game">
 									</div>
 								</div>
 								<div class="news__column swiper-slide">
 									<div class="news__image _ibg">
-										<img src="img/new/01.png" alt="game">
+										<img class="lazy" data-src="lazy.jpg" src="img/new/01.webp" alt="game">
 									</div>
 								</div>
 								<div class="news__column swiper-slide">
 									<div class="news__image _ibg">
-										<img src="img/new/02.png" alt="game">
+										<img class="lazy" data-src="lazy.jpg" src="img/new/02.webp" alt="game">
 									</div>
 								</div>
 								<div class="news__column swiper-slide">
 									<div class="news__image _ibg">
-										<img src="img/new/03.png" alt="game">
+										<img class="lazy" data-src="lazy.jpg" src="img/new/03.webp" alt="game">
 									</div>
 								</div>
 								<div class="news__column swiper-slide">
 									<div class="news__image _ibg">
-										<img src="img/new/04.png" alt="game">
+										<img class="lazy" data-src="lazy.jpg" src="img/new/04.webp" alt="game">
 									</div>
 								</div>
 							</div>
@@ -268,17 +281,17 @@
 							<div class="news__columns swiper-wrapper">
 								<div class="news__column swiper-slide">
 									<div class="news__image _ibg">
-										<img src="img/family/01.png" alt="game">
+										<img class="lazy" data-src="lazy.jpg" src="img/family/01.webp" alt="game">
 									</div>
 								</div>
 								<div class="news__column swiper-slide">
 									<div class="news__image _ibg">
-										<img src="img/family/02.png" alt="game">
+										<img class="lazy" data-src="lazy.jpg" src="img/family/02.webp" alt="game">
 									</div>
 								</div>
 								<div class="news__column swiper-slide">
 									<div class="news__image _ibg">
-										<img src="img/family/03.png" alt="game">
+										<img class="lazy" data-src="lazy.jpg" src="img/family/03.webp" alt="game">
 									</div>
 									<div class="premium">
 										<p class="premium__text">Премиум</p>
@@ -286,27 +299,27 @@
 								</div>
 								<div class="news__column swiper-slide">
 									<div class="news__image _ibg">
-										<img src="img/family/04.png" alt="game">
+										<img class="lazy" data-src="lazy.jpg" src="img/family/03.webp" alt="game">
 									</div>
 								</div>
 								<div class="news__column swiper-slide">
 									<div class="news__image _ibg">
-										<img src="img/family/01.png" alt="game">
+										<img class="lazy" data-src="lazy.jpg" src="img/family/01.webp" alt="game">
 									</div>
 								</div>
 								<div class="news__column swiper-slide">
 									<div class="news__image _ibg">
-										<img src="img/family/02.png" alt="game">
+										<img class="lazy" data-src="lazy.jpg" src="img/family/02.webp" alt="game">
 									</div>
 								</div>
 								<div class="news__column swiper-slide">
 									<div class="news__image _ibg">
-										<img src="img/family/03.png" alt="game">
+										<img class="lazy" data-src="lazy.jpg" src="img/family/03.webp" alt="game">
 									</div>
 								</div>
 								<div class="news__column swiper-slide">
 									<div class="news__image _ibg">
-										<img src="img/family/04.png" alt="game">
+										<img class="lazy" data-src="lazy.jpg" src="img/family/02.webp" alt="game">
 									</div>
 								</div>
 							</div>
@@ -322,11 +335,11 @@
 								<div class="news__button smart__button-next swiper-button-next">&rarr;</div>
 							</div>
 						</div>
-						<div class="news__swiper">
+						<div class="smart__swiper">
 							<div class="news__columns swiper-wrapper">
 								<div class="news__column swiper-slide">
 									<div class="news__image _ibg">
-										<img src="img/smart/01.png" alt="game">
+										<img class="lazy" data-src="lazy.jpg" src="img/smart/01.webp" alt="game">
 									</div>
 									<div class="premium">
 										<p class="premium__text">Премиум</p>
@@ -334,37 +347,37 @@
 								</div>
 								<div class="news__column swiper-slide">
 									<div class="news__image _ibg">
-										<img src="img/smart/02.png" alt="game">
+										<img class="lazy" data-src="lazy.jpg" src="img/smart/02.webp" alt="game">
 									</div>
 								</div>
 								<div class="news__column swiper-slide">
 									<div class="news__image _ibg">
-										<img src="img/smart/03.png" alt="game">
+										<img class="lazy" data-src="lazy.jpg" src="img/smart/03.webp" alt="game">
 									</div>
 								</div>
 								<div class="news__column swiper-slide">
 									<div class="news__image _ibg">
-										<img src="img/smart/04.png" alt="game">
+										<img class="lazy" data-src="lazy.jpg" src="img/smart/04.webp" alt="game">
 									</div>
 								</div>
 								<div class="news__column swiper-slide">
 									<div class="news__image _ibg">
-										<img src="img/smart/01.png" alt="">
+										<img class="lazy" data-src="lazy.jpg" src="img/smart/01.webp" alt="">
 									</div>
 								</div>
 								<div class="news__column swiper-slide">
 									<div class="news__image _ibg">
-										<img src="img/smart/02.png" alt="game">
+										<img class="lazy" data-src="lazy.jpg" src="img/smart/02.webp" alt="game">
 									</div>
 								</div>
 								<div class="news__column swiper-slide">
 									<div class="news__image _ibg">
-										<img src="img/smart/03.png" alt="game">
+										<img class="lazy" data-src="lazy.jpg" src="img/smart/03.webp" alt="game">
 									</div>
 								</div>
 								<div class="news__column swiper-slide">
 									<div class="news__image _ibg">
-										<img src="img/smart/04.png" alt="game">
+										<img class="lazy" data-src="lazy.jpg" src="img/smart/04.webp" alt="game">
 									</div>
 								</div>
 							</div>
@@ -375,20 +388,20 @@
 					<div class="subscription__container container">
 						<div class="subscription__link link">Играйте бесплатно, купите потом</div>
 						<div class="subscription__columns">
-							<div class="subscription__free free">
+							<a href="#" class="subscription__free subscription__item free">
 								<div class="free__image">
 									<img src="img/decor/tree.svg" alt="tree">
 								</div>
-								<h2 class="free__title">Бесплатно</h2>
-								<p class="free__text">Базовая версия<span>с ограниченным доступом</span></p>
-							</div>
-							<div class="subscription__pay-premium pay-premium">
+								<h2 class="free__title">399 руб/месяц</h2>
+								<p class="free__text">Премиум версия<span> с полным доступом</span></p>
+							</a>
+							<a href="#" class="subscription__pay-premium subscription__item pay-premium">
 								<div class="pay-premium__image">
 									<img src="img/decor/star.svg" alt="star">
 								</div>
-								<h2 class="pay-premium__title">399 руб/месяц</h2>
-								<p class="pay-premium__text">Премиум версия<span> с полным доступом</span></p>
-							</div>
+								<h2 class="pay-premium__title">Бесплатно</h2>
+								<p class="pay-premium__text">Базовая версия<span>с ограниченным доступом</span></p>
+							</a>
 						</div>
 					</div>
 				</article>
@@ -407,8 +420,8 @@
 										 <a href="#" class="platform__button">Начать играть</a>
 									</div>
 									<div class="platform__images">
-										<div class="platform__image platform__image-laptop"><img src="img/platform/laptop.png" alt="laptop"></div>
-										<div class="platform__image platform__image-pc"><img src="img/platform/comp.png" alt="pc"></div>
+										<div class="platform__image platform__image-laptop"><img class="lazy" data-src="lazy.jpg" src="img/platform/laptop.webp" alt="laptop"></div>
+										<div class="platform__image platform__image-pc"><img class="lazy" data-src="lazy.jpg" src="img/platform/comp.webp" alt="pc"></div>
 									</div>
 								</div>
 								<div class="platform__column">
@@ -418,7 +431,7 @@
 										 <a href="#" class="platform__button">Начать играть</a>
 									</div>
 									<div class="platform__images platform__images-blue">
-										<div class="platform__image platform__image-iphone"><img src="img/platform/iphone.png" alt="iphone"></div>
+										<div class="platform__image platform__image-iphone"><img class="lazy" data-src="lazy.jpg" src="img/platform/iphone.webp" alt="iphone"></div>
 									</div>
 								</div>
 								<div class="platform__column">
@@ -428,7 +441,7 @@
 										 <a href="#" class="platform__button">Начать играть</a>
 									</div>
 									<div class="platform__images platform__images-dark">
-										<div class="platform__image platform__image-pc"><img src="img/platform/comp.png" alt="pc"></div>
+										<div class="platform__image platform__image-pc"><img class="lazy" data-src="lazy.jpg" src="img/platform/comp.webp" alt="pc"></div>
 									</div>
 								</div>
 							</div>
@@ -489,7 +502,7 @@
 					</div>
 				</section>
 				<section class="accordion">
-					<img class="accordion__purple" src="img/entertainment/purple.png" alt="bubble">
+					<img class="accordion__purple" src="img/entertainment/purple.webp" alt="bubble">
 					<div class="accordion__container container">
 						<a href="" class="accordion__link link">FAQ</a>
 						<nav class="accordion__menu">
@@ -601,6 +614,8 @@
 	</div>
 </footer>
 		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 		<script src="./js/index.bundle.js"></script>
 	</body>
 </html>

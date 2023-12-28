@@ -5,6 +5,7 @@
 		position: absolute;
 		right: 0;
 		top: -10%;
+		animation: bubble 6s infinite alternate-reverse linear 5s;
 	}
 	&__container {
 		position: relative;

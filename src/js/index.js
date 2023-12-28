@@ -1,23 +1,51 @@
+import { gsapAnimation } from "./animation";
+import './modules/lazyload.min';
+
+gsapAnimation()
 
 import Swiper from "swiper";
-import { Navigation, Pagination, Parallax, Autoplay, Controller} from "swiper/modules";
+import { Navigation, Pagination, Parallax, Autoplay, Controller, Mousewheel} from "swiper/modules";
 
 document.addEventListener('DOMContentLoaded',()=>{
 
-	const videoPlayer = document.querySelector('.video__wrapper'),
-			videoIcon = document.querySelector('.video__icon'),
-			videoPoster = document.querySelector('.video__poster');
+	//Modal
+	
+	const video = document.querySelector('.video')
+	const preview = document.querySelector('.video__poster')
+	const modal = document.querySelector('.video-modal')
 
-	videoIcon.addEventListener("click", function(e) {
-		videoIcon.style.display = 'none'
-		videoPoster.style.display = 'none'
+	modal.addEventListener('click',(e)=>{
+		if(e.target === modal || e.target.getAttribute('data-close') === ''){
+			modal.classList.remove('show')
+			stopVideo();
+		}
+	})
 
-		if(videoPlayer.classList.contains('ready')){
+	function stopVideo() {
+		const iframe = video.querySelector('iframe');
+		if (iframe) {
+			iframe.src = ''
+			video.classList.remove('ready')
+			document.body.classList.remove('hidden')
+		}
+	}
+
+	preview.addEventListener("click", function(e) {
+		if(video.classList.contains('ready')){
 			return
 		}
-		videoPlayer.classList.add('ready')
-		videoPlayer.insertAdjacentHTML('afterbegin', '<iframe class="video__player" src="https://www.youtube.com/embed/HOfdboHvshg?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>')
+
+		modal.classList.add('show')
+
+		video.classList.add('ready')
+
+		document.body.classList.add('hidden')
+
+		let src = video.dataset.src
+
+		video.insertAdjacentHTML('afterbegin', '<iframe src=" ' + src + '  " title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>')
 	});
+	
 
 	//Swiper
 	if(innerWidth < 768 ){
@@ -29,6 +57,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 			e.preventDefault()
 			menuBurger.classList.toggle('active')
 			menuIcon.classList.toggle('active')
+			document.body.classList.toggle('hidden')
 		})
 
 		const swiperNumber = new Swiper('.entertainment__swiper', {
@@ -40,7 +69,6 @@ document.addEventListener('DOMContentLoaded',()=>{
 		watchOverflow: true,
 		speed: 1000,
 		preloadImages: false,
-		parallax: true,
 		pagination:{
 			el:'.controls-entertainment__dotts',
 			clickable: true,
@@ -92,7 +120,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 					 			'<div class="sub-preview__item">' + 
 									'<h3 class="sub-preview__title">Свинтус NEON</h3>' + 
 									'<p class="sub-preview__text">Хрю-киберпанк наступил</p>' + 
-									'<div class="sub-preview__avatar"> <img src="../img/catalog/avatar1.png" alt=""> </div>' + 
+									'<div class="sub-preview__avatar"> <img src="img/catalog/avatar1.png" alt=""> </div>' + 
 								'</div>' + 
 							'</div>';
 			  }
@@ -139,109 +167,49 @@ document.addEventListener('DOMContentLoaded',()=>{
 		swiperCatalog.controller.control = swiperSubPreview
 		swiperSubPreview.controller.control = swiperCatalog
 
-		const swiperNews = new Swiper('.news__swiper', {
-			modules: [Navigation],
-			loop: false,
-			observer: true,
-			observeParents: true,
-			spaceBetween:40,
-			watchOverflow: true,
-			speed: 1000,
-			preloadImages: false,
-			parallax: true,
-			navigation:{
-				nextEl: '.news__button-next',
-				prevEl: '.news__button-prev'
-			},
-			breakpoints:{
-				320:{
-					slidesPerView:1.1
-				},
-				550:{
-					slidesPerView:1.8
-				},
-				700:{
-					slidesPerView:2.2
-				},
-				900:{
-					slidesPerView:3.2
-				},
-				1100:{
-					slidesPerView:3.5
-				}
-			}
-				
-		});
 
-		const swiperFamily = new Swiper('.family__swiper', {
-			modules: [Navigation],
-			loop: false,
-			observer: true,
-			observeParents: true,
-			spaceBetween:40,
-			watchOverflow: true,
-			speed: 1000,
-			preloadImages: false,
-			parallax: true,
-			navigation:{
-				nextEl: '.family__button-next ',
-				prevEl: '.family__button-prev '
-			},
-			breakpoints:{
-				320:{
-					slidesPerView:1.1
+		function swiperSection(swiper,prev, next){
+			const swiperFamily = new Swiper(`${swiper}`, {
+				modules: [Navigation, Mousewheel],
+				loop: false,
+				observer: true,
+				observeParents: true,
+				spaceBetween:40,
+				watchOverflow: true,
+				speed: 1000,
+				preloadImages: false,
+				navigation:{
+					nextEl: `${next}`,
+					prevEl: `${prev}`
 				},
-				550:{
-					slidesPerView:1.8
+				breakpoints:{
+					320:{
+						slidesPerView:1.1
+					},
+					550:{
+						slidesPerView:1.8
+					},
+					700:{
+						slidesPerView:2.2
+					},
+					900:{
+						slidesPerView:3.2
+					},
+					1100:{
+						slidesPerView:3.5
+					}
 				},
-				700:{
-					slidesPerView:2.2
-				},
-				900:{
-					slidesPerView:3.2
-				},
-				1100:{
-					slidesPerView:3.5
-				}
-			}
 				
-		});
-
-		const swiperSmart = new Swiper('.family__swiper', {
-			modules: [Navigation],
-			loop: false,
-			observer: true,
-			observeParents: true,
-			spaceBetween:40,
-			watchOverflow: true,
-			speed: 1000,
-			preloadImages: false,
-			parallax: true,
-			navigation:{
-				nextEl: '.smart__button-next ',
-				prevEl: '.smart__button-prev '
-			},
-			breakpoints:{
-				320:{
-					slidesPerView:1.1
-				},
-				550:{
-					slidesPerView:1.8
-				},
-				700:{
-					slidesPerView:2.2
-				},
-				900:{
-					slidesPerView:3.2
-				},
-				1100:{
-					slidesPerView:3.5
-				}
-			}
-				
-		});
+				mousewheel: true
+			});
+		}
+		
+		swiperSection('.family__swiper', '.family__button-prev', '.family__button-next')
+		swiperSection('.news__swiper', '.news__button-prev', '.news__button-next')
+		swiperSection('.smart__swiper', '.smart__button-prev', '.smart__button-next')
 
 		const swiperReview = new Swiper('.review__body', {
+			
 			modules: [Navigation, Parallax],
 			loop: false,
 			observer: true,
@@ -250,7 +218,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 			slidesPerView:1,
 			watchOverflow: true,
 			parallax: true,
-			speed: 2000,
+			speed: 500,
 			preloadImages: false,
 			parallax: true,
 			navigation:{

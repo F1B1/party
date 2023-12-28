@@ -34,7 +34,7 @@
 		text-transform: uppercase;
 		@include adaptiveValue("font-size", 14,12,1 );
 		font-weight: 700;
-		background-image: url('../../img/decor/diamond.svg');
+		background-image: url('../img/decor/diamond.svg');
 		background-repeat: no-repeat;
 		background-size: contain;
 		padding: 0px 0px 0px 20px;
@@ -55,6 +55,23 @@
 .ghost-blue{
 	top: 5%;
 	right: 0;
+	animation: ghost 6s infinite alternate-reverse linear 5s;
+}
+
+@keyframes ghost {
+	from{
+		transform: translate(0,0);
+	}
+	25%{
+		transform: translate(0,-25px);
+	}
+	50%{
+		transform: translate(-35px,-15px);
+
+	}
+	to{
+		transform: translate(-50px,-50px);
+	}
 }
 
 .astronaut1{
@@ -77,7 +94,7 @@
 		width: 70px;
 		content: "";
 		height: 120px;
-		background-image: url(../../img/decor/arrow1.svg);
+		background-image: url(../img/decor/arrow1.svg);
 		background-size: contain;
 		background-repeat: no-repeat;
 		position: absolute;
@@ -85,7 +102,7 @@
 		bottom: 10%;
 		@media (max-width:$mobile){
 			width: 60px;
-			background-image: url(../../img/decor/arrow4.svg);
+			background-image: url(../img/decor/arrow4.svg);
 			right: -10%;
 			bottom: 0;
 			transform: scale(1,-1); 
@@ -100,7 +117,7 @@
 		width: 120px;
 		content: "";
 		height: 120px;
-		background-image: url(../../img/decor/arrow2.svg);
+		background-image: url(../img/decor/arrow2.svg);
 		background-size: contain;
 		background-repeat: no-repeat;
 		position: absolute;
@@ -108,7 +125,7 @@
 		bottom: 0;
 		@media (max-width:$mobile){
 			width: 60px;
-			background-image: url(../../img/decor/arrow4.svg);
+			background-image: url(../img/decor/arrow4.svg);
 		
 			left: 100%;
 			top: 0;
@@ -122,7 +139,7 @@
 		width: 150px;
 		content: "";
 		height: 120px;
-		background-image: url(../../img/decor/arrow3.svg);
+		background-image: url(../img/decor/arrow3.svg);
 		background-size: contain;
 		background-repeat: no-repeat;
 		position: absolute;
@@ -139,6 +156,7 @@
 	max-width: 280px;
 	max-height: 280px;
 	display: flex;
+	color: #fff;
 	justify-content:center;align-items: center;
 	background: linear-gradient(270deg, rgb(22, 120, 156) 0%, rgb(81, 19, 148) 50%) !important;
 	@media (max-width:$mobile){
@@ -161,7 +179,7 @@
 		width: 50px;
 		content: "";
 		height: 120px;
-		background-image: url(../../img/decor/arrow4.svg);
+		background-image: url(../img/decor/arrow4.svg);
 		background-size: contain;
 		background-repeat: no-repeat;
 		position: absolute;

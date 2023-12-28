@@ -5,6 +5,7 @@
 		position: absolute;
 		right: 0;
 		top: 10%;
+		animation: bubble 6s infinite alternate-reverse linear 5s;
 		@media (max-width:$mobile){
 			 display: none; 
 		}
@@ -140,7 +141,7 @@
 .choose__button-1{
 	&::before{
 		content:'';
-		background-image: url('../../img/decor/chrome.svg');
+		background-image: url('../img/decor/chrome.svg');
 		background-size: contain;
 		width: 24px;
 		height: 18px;
@@ -151,7 +152,7 @@
 .choose__button-2{
 	&::before{
 		content:'';
-		background-image: url('../../img/decor/android.svg');
+		background-image: url('../img/decor/android.svg');
 		background-size: contain;
 		width: 24px;
 		height: 18px;
@@ -160,9 +161,6 @@
 	}
 }
 
-.entertainment {
-	&__controls {}
-}
 .controls-entertainment {
 	&__dotts {
 		margin: 40px 0px 0px 0px;
@@ -178,5 +176,15 @@
 	.swiper-pagination-bullet-active{
 		width: 24px !important;
 		border-radius: 8px !important;
+	}
+}
+
+@keyframes bubble {
+	from{
+		transform: translateY(50px);
+	}
+
+	to{
+		transform: translateY(-50px);
 	}
 }
