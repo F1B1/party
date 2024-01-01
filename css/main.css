@@ -2445,7 +2445,6 @@ mm .sub-preview__column:not(:last-child) {
   position: relative;
   width: 100%;
   padding: 0px 0px 56.25% 0px;
-  background-color: #eee;
 }
 .video iframe {
   position: absolute;
